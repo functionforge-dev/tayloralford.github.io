@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Walking Services - Gilly's School For Dogs</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-top: 70px;
+        }
+
+        .packages {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .package-card {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border: 2px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin: 1rem 0;
+        }
+
+        .package-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .package-features li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .package-features li:before {
+            content: "✓";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .book-now-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-now-btn:hover {
+            background-color: var(--light-green);
+        }
+
+        .service-info {
+            padding: 5rem 1rem;
+            background-color: var(--gray-light);
+        }
+
+        .service-info-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-card i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Gilly's School For Dogs</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#training">Training</a></li>
+                <li><a href="../index.html#booking">Book Now</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="hero-content">
+                <h1>Dog Walking Services</h1>
+                <p>Professional and reliable dog walking services for your furry friend</p>
+            </div>
+        </section>
+
+        <section class="packages">
+            <h2>Our Walking Packages</h2>
+            <div class="package-grid">
+                <div class="package-card">
+                    <h3>Single Walk</h3>
+                    <div class="price">£15</div>
+                    <ul class="package-features">
+                        <li>30-minute walk</li>
+                        <li>One-on-one attention</li>
+                        <li>Water provided</li>
+                        <li>Basic training reinforcement</li>
+                        <li>Photo updates</li>
+                    </ul>
+                    <a href="../index.html#booking" class="book-now-btn">Book Now</a>
+                </div>
+
+                <div class="package-card">
+                    <h3>Weekly Package</h3>
+                    <div class="price">£65</div>
+                    <ul class="package-features">
+                        <li>5 walks per week</li>
+                        <li>30-minute walks</li>
+                        <li>One-on-one attention</li>
+                        <li>Water provided</li>
+                        <li>Basic training reinforcement</li>
+                        <li>Photo updates</li>
+                        <li>10% discount</li>
+                    </ul>
+                    <a href="../index.html#booking" class="book-now-btn">Book Now</a>
+                </div>
+
+                <div class="package-card">
+                    <h3>Monthly Package</h3>
+                    <div class="price">£240</div>
+                    <ul class="package-features">
+                        <li>20 walks per month</li>
+                        <li>30-minute walks</li>
+                        <li>One-on-one attention</li>
+                        <li>Water provided</li>
+                        <li>Basic training reinforcement</li>
+                        <li>Photo updates</li>
+                        <li>20% discount</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <a href="../index.html#booking" class="book-now-btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-info">
+            <div class="service-info-content">
+                <h2>Why Choose Our Dog Walking Service?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Flexible Scheduling</h3>
+                        <p>We work around your schedule to ensure your dog gets their daily exercise when it's most convenient for you.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Local Routes</h3>
+                        <p>We know the best walking routes in your area, including parks and safe walking paths.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Experienced Walkers</h3>
+                        <p>Our walkers are trained in dog behavior and first aid, ensuring your dog's safety and well-being.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Photo Updates</h3>
+                        <p>Receive photos and updates of your dog's adventures during their walk.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gilly's School For Dogs</h3>
+                <p>Professional dog training and care services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#training">Training</a></li>
+                    <li><a href="../index.html#booking">Book Now</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gilly's School For Dogs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html> 

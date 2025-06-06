@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppy Classes - Gilly's School For Dogs</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1548767797-d8c844163c4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .service-hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .packages {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .package-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .package-card .price {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .package-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .package-card ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .package-card .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .package-card .btn:hover {
+            background-color: #555;
+        }
+
+        .service-info {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-info h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .info-card i {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Gilly's School For Dogs</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#training">Training</a></li>
+                <li><a href="../index.html#booking">Book Now</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <h1>Puppy Training Classes</h1>
+            <p>Give your puppy the best start in life with our specialized training classes. Learn essential skills and build a strong bond with your furry friend.</p>
+        </section>
+
+        <section class="packages">
+            <h2>Class Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Puppy Foundation</h3>
+                    <div class="price">£199</div>
+                    <ul>
+                        <li>6-week course</li>
+                        <li>Basic commands</li>
+                        <li>Socialization</li>
+                        <li>House training</li>
+                        <li>Puppy playtime</li>
+                        <li>Training manual</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Puppy Plus</h3>
+                    <div class="price">£299</div>
+                    <ul>
+                        <li>8-week course</li>
+                        <li>Advanced commands</li>
+                        <li>Behavior management</li>
+                        <li>Leash training</li>
+                        <li>Socialization</li>
+                        <li>Problem solving</li>
+                        <li>Training manual</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Puppy Elite</h3>
+                    <div class="price">£399</div>
+                    <ul>
+                        <li>12-week course</li>
+                        <li>Complete training</li>
+                        <li>Advanced socialization</li>
+                        <li>Agility basics</li>
+                        <li>Behavior modification</li>
+                        <li>Private sessions</li>
+                        <li>Training manual</li>
+                        <li>Certificate of completion</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-info">
+            <h2>Why Choose Our Puppy Classes?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Expert Trainers</h3>
+                    <p>Our trainers specialize in puppy development and use positive reinforcement methods.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Small Classes</h3>
+                    <p>Limited class sizes ensure personalized attention for each puppy and owner.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Safe Environment</h3>
+                    <p>Our training facility is designed specifically for puppies with safety in mind.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Comprehensive Curriculum</h3>
+                    <p>We cover all essential aspects of puppy training and development.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#booking">Book Now</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@gillysdogschool.com</p>
+                <p>Phone: 07749347695</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gilly's School For Dogs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

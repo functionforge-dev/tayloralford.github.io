@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Sitting - Gilly's School For Dogs</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .service-hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .packages {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .package-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card h3 {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .package-card .price {
+            font-size: 2.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .package-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .package-card ul li {
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .package-card .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .package-card .btn:hover {
+            background-color: #555;
+        }
+
+        .service-info {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-info h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .info-card i {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Gilly's School For Dogs</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#training">Training</a></li>
+                <li><a href="../index.html#booking">Book Now</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <h1>Professional Dog Sitting</h1>
+            <p>Trust your furry friend to our experienced dog sitters. We provide loving care and attention in the comfort of your home.</p>
+        </section>
+
+        <section class="packages">
+            <h2>Daycare Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Half Day Care</h3>
+                    <div class="price">£25</div>
+                    <ul>
+                        <li>4 hours of care</li>
+                        <li>1 walk included</li>
+                        <li>Regular updates</li>
+                        <li>Feeding and medication</li>
+                        <li>Basic training reinforcement</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Full Day Care</h3>
+                    <div class="price">£35</div>
+                    <ul>
+                        <li>8 hours of care</li>
+                        <li>2 walks included</li>
+                        <li>Regular updates</li>
+                        <li>Feeding and medication</li>
+                        <li>Basic training reinforcement</li>
+                        <li>Playtime with other dogs</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Weekly Package</h3>
+                    <div class="price">£150</div>
+                    <ul>
+                        <li>5 full days of care</li>
+                        <li>Daily walks included</li>
+                        <li>Regular photo updates</li>
+                        <li>Feeding and medication</li>
+                        <li>Training reinforcement</li>
+                        <li>Socialization with other dogs</li>
+                        <li>10% discount on regular rate</li>
+                    </ul>
+                    <a href="../index.html#booking" class="btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-info">
+            <h2>Why Choose Our Sitting Service?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Trusted Care</h3>
+                    <p>Our sitters are thoroughly vetted, insured, and experienced in handling dogs of all sizes and temperaments.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Home Comfort</h3>
+                    <p>Your dog stays in their familiar environment, reducing stress and anxiety while you're away.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-camera"></i>
+                    <h3>Regular Updates</h3>
+                    <p>Receive photos and updates throughout the day to stay connected with your furry friend.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Personalized Care</h3>
+                    <p>We tailor our services to your dog's specific needs, routine, and personality.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#training">Training</a></li>
+                    <li><a href="../index.html#booking">Book Now</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@gillysdogschool.com</p>
+                <p>Phone: 07749347695</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gilly's School For Dogs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

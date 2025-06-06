@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Training - Gilly's School For Dogs</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .service-hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .service-hero p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .packages {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
+
+        .package-card {
+            background: white;
+            padding: 2.5rem 1.5rem 2rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 0.5rem;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-card h3 {
+            color: #222;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.5px;
+            font-family: inherit;
+        }
+
+        .package-card .price {
+            font-size: 1.1rem;
+            color: #4CAF50;
+            font-weight: 500;
+            margin: 0.5rem 0 1.2rem 0;
+            font-family: inherit;
+        }
+
+        .package-card p {
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            font-family: inherit;
+            flex: 1 1 auto;
+        }
+
+        .package-card .cta-button {
+            font-size: 1rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            background: var(--accent-color, #4CAF50);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.2rem;
+            align-self: center;
+        }
+
+        .package-card .cta-button:hover {
+            background: var(--light-green, #8BC34A);
+        }
+
+        .service-info {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-info h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .info-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .info-card i {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .training-note {
+            max-width: 900px;
+            margin: 2rem auto 3rem auto;
+            background: #fffbe7;
+            color: #333;
+            border-left: 5px solid #4CAF50;
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.08rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../images/gillys-logo.png" alt="Gilly's School For Dogs Logo" class="site-logo">
+                <i class="fas fa-paw"></i>
+                <h1>Gilly's School For Dogs</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#training">Training</a></li>
+                <li><a href="../index.html#booking">Book Now</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <h1>Professional Dog Training</h1>
+            <p>Transform your dog's behavior with our expert training programs. We offer personalized training solutions for dogs of all ages and breeds.</p>
+        </section>
+
+        <section class="packages">
+            <h2>Training Packages</h2>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Weekly and Fortnightly</h3>
+                    <div class="price">£50 PER HOUR</div>
+                    <p>This service is for customers wanting either one off, weekly, fortnightly or irregular training sessions. Suitable for top up training.<br>Advice and guidance.</p>
+                    <a href="../index.html#booking" class="cta-button">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Daily Training</h3>
+                    <div class="price">5 DAY PACKAGE - 2 HOURS PER DAY - £375<br>10 DAY PACKAGE - 1 HOUR PER DAY - £400</div>
+                    <p>This package is usually recommended for puppy training and minor behavioural issues. Consistency is paramount in training. Therefore this price point includes working with your dog(s) consecutively throughout the week.</p>
+                    <a href="../index.html#booking" class="cta-button">Book Now</a>
+                </div>
+                <div class="package-card">
+                    <h3>Week Intensive</h3>
+                    <div class="price">£600</div>
+                    <p>This is a 7 day intensive training course where your dog will stay with myself and my dogs in a family setting. This is suited to dogs who will benefit from not only having time with me but also time with other dogs as part of a pack.</p>
+                    <a href="../index.html#booking" class="cta-button">Book Now</a>
+                </div>
+            </div>
+        </section>
+        <!-- Training Packages Recommendation Note (moved for visibility) -->
+        <div class="training-note">
+            <strong>Note:</strong> Please note that I will recommend a package that I believe is best suited to your dogs' needs and current behavioural issues. This will vary from dog to dog and will be discussed during the consultation.
+        </div>
+
+        <section class="service-info">
+            <h2>Why Choose Our Training?</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Trainers</h3>
+                    <p>Our trainers are certified professionals with years of experience in dog behavior and training.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Positive Reinforcement</h3>
+                    <p>We use modern, positive training methods that build trust and strengthen your bond with your dog.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Home Training</h3>
+                    <p>We come to your home for training sessions, making your dog more comfortable in their environment.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>We offer flexible scheduling options to accommodate your busy lifestyle.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#services">Services</a></li>
+                    <li><a href="../index.html#booking">Book Now</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@gillysdogschool.com</p>
+                <p>Phone: 07749347695</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gilly's School For Dogs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

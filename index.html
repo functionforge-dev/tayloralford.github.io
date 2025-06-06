@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilly's School For Dogs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/gillys-logo.png" alt="Gilly's School For Dogs Logo" class="site-logo">
+                <i class="fas fa-paw"></i>
+                <h1>Gilly's School For Dogs</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Carousel Section -->
+        <section id="home" class="hero-carousel">
+            <div class="carousel-slides">
+                <div class="carousel-slide active" style="background-image: url('images/dog1.jpg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h1>Welcome to Gilly's School For Dogs</h1>
+                        <p>Professional Dog Training & Care Services</p>
+                        <a href="#booking" class="cta-button">Book a Session</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/dog2.jpg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h1>Happy, Healthy, Well-Trained</h1>
+                        <p>Building bonds through positive reinforcement</p>
+                        <a href="#services" class="cta-button">Our Services</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/van-and-dogs.jpg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h1>Expert Trainers, Loving Care</h1>
+                        <p>Personalized plans for every dog</p>
+                        <a href="#training" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: url('images/dog4.jpg');">
+                    <div class="carousel-overlay"></div>
+                    <div class="carousel-content">
+                        <h1>Join Our Community</h1>
+                        <p>See our happy dogs in action</p>
+                        <a href="#gallery" class="cta-button">View Gallery</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <span class="carousel-dot active" data-slide="0"></span>
+                <span class="carousel-dot" data-slide="1"></span>
+                <span class="carousel-dot" data-slide="2"></span>
+                <span class="carousel-dot" data-slide="3"></span>
+            </div>
+            <button class="carousel-arrow left" aria-label="Previous Slide">&#10094;</button>
+            <button class="carousel-arrow right" aria-label="Next Slide">&#10095;</button>
+        </section>
+
+        <!-- Dog Fact Banner -->
+        <div id="dog-fact-banner" class="dog-fact-banner"></div>
+
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <a href="services/dog-training.html" class="service-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Dog Training</h3>
+                    <p>Professional obedience training and behavior modification</p>
+                </a>
+                <a href="services/dog-sitting.html" class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Dog Sitting</h3>
+                    <p>Comfortable and safe dog sitting services in your home</p>
+                </a>
+                <a href="services/puppy-classes.html" class="service-card">
+                    <i class="fas fa-paw"></i>
+                    <h3>Puppy Classes</h3>
+                    <p>Specialized training for puppies and young dogs</p>
+                </a>
+                <a href="services/dog-walking.html" class="service-card">
+                    <i class="fas fa-walking"></i>
+                    <h3>Dog Walking</h3>
+                    <p>Regular exercise and outdoor adventures for your dog</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>Our Happy Dogs</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/dog1.jpg" alt="German Shepherd at sunrise in a field" data-full="images/dog1.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dog2.jpg" alt="Two German Shepherds sitting and looking up" data-full="images/dog2.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dog3.jpg" alt="Two German Shepherds sitting and looking up" data-full="images/dog3.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/van-and-dogs.jpg" alt="Gilly's School For Dogs van with three dogs" data-full="images/van-and-dogs.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dog4.jpg" alt="Four dogs sitting in a row on a field during training" data-full="images/dog4.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/merle-bulldog.jpg" alt="Merle bulldog looking up" data-full="images/merle-bulldog.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/spaniels-and-merle.jpg" alt="Three spaniels sitting on grass" data-full="images/spaniels-and-merle.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/black-puppies.jpg" alt="Pile of black puppies sleeping" data-full="images/black-puppies.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/akita-husky.jpg" alt="Large Akita and smaller Husky or Akita mix sitting outside" data-full="images/akita-husky.jpg" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/dachshund-closeup.jpg" alt="Close-up of a dachshund's face" data-full="images/dachshund-closeup.jpg" class="expandable">
+                </div>
+            </div>
+        </section>
+
+        <!-- Rehome Section -->
+        <section id="rehome" class="rehome-section">
+            <h2>Rehome a Dog</h2>
+            <div class="rehome-grid">
+                <div class="rehome-card" data-dog="1">
+                    <img src="images/dog1.jpg" alt="Buddy the German Shepherd">
+                    <h3>Buddy</h3>
+                    <p>2-year-old German Shepherd. Friendly, energetic, and loves walks!</p>
+                    <button class="view-profile-btn" data-dog="1">View Profile</button>
+                </div>
+                <div class="rehome-card" data-dog="2">
+                    <img src="images/dog2.jpg" alt="Luna the German Shepherd">
+                    <h3>Luna</h3>
+                    <p>3-year-old German Shepherd. Gentle, loyal, and great with kids.</p>
+                    <button class="view-profile-btn" data-dog="2">View Profile</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rehome Modal -->
+        <div id="rehome-modal" class="rehome-modal">
+            <div class="rehome-modal-content">
+                <span class="rehome-modal-close">&times;</span>
+                <img id="rehome-modal-img" src="" alt="Dog profile photo">
+                <h3 id="rehome-modal-name"></h3>
+                <p id="rehome-modal-desc"></p>
+                <div id="rehome-modal-extra"></div>
+            </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox-modal" class="lightbox-modal">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img" src="" alt="Expanded dog photo">
+        </div>
+
+        <section id="training" class="about">
+            <h2>Our Training Approach</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Gilly's School For Dogs, we believe in positive reinforcement and building strong bonds between dogs and their owners. Our experienced trainers use modern, science-based methods to help your dog reach their full potential.</p>
+                    <ul class="training-features">
+                        <li>Positive reinforcement training</li>
+                        <li>Personalized training plans</li>
+                        <li>Small class sizes</li>
+                        <li>Experienced trainers</li>
+                        <li>Ongoing support</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/dog4.jpg" alt="Four dogs sitting in a row on a field during training">
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="contact">
+            <h2>Book Your Session</h2>
+            <div id="dog-bone-progress" class="dog-bone-progress">
+              <div class="bone-bar">
+                <div class="bone-bar-fill" style="width: 0%"></div>
+                <span class="bone-emoji">🦴</span>
+              </div>
+            </div>
+            <form class="contact-form">
+                <h3>Owner Information</h3>
+                <div class="form-section">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="tel" placeholder="Your Phone" required>
+                    <input type="text" placeholder="Your Address" required>
+                </div>
+
+                <h3>Dog Information</h3>
+                <div class="form-section">
+                    <input type="text" placeholder="Dog's Name" required>
+                    <select required>
+                        <option value="">Select Breed</option>
+                        <option value="labrador">Labrador Retriever</option>
+                        <option value="german-shepherd">German Shepherd</option>
+                        <option value="golden-retriever">Golden Retriever</option>
+                        <option value="bulldog">Bulldog</option>
+                        <option value="poodle">Poodle</option>
+                        <option value="beagle">Beagle</option>
+                        <option value="rottweiler">Rottweiler</option>
+                        <option value="yorkshire-terrier">Yorkshire Terrier</option>
+                        <option value="boxer">Boxer</option>
+                        <option value="dachshund">Dachshund</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="text" placeholder="Other Breed (if selected)" class="other-breed">
+                    <select required>
+                        <option value="">Select Sex</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <input type="number" placeholder="Age (in years)" min="0" max="30" step="0.1" required>
+                    <input type="number" placeholder="Weight (in kg)" min="0" max="100" step="0.1" required>
+                    <select required>
+                        <option value="">Is your dog neutered/spayed?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <h3>Service Details</h3>
+                <div class="form-section">
+                    <select required>
+                        <option value="">Select Service</option>
+                        <option value="training">Dog Training</option>
+                        <option value="sitting">Dog Sitting</option>
+                        <option value="puppy">Puppy Classes</option>
+                        <option value="walking">Dog Walking</option>
+                    </select>
+                    <select required>
+                        <option value="">Select Package</option>
+                        <option value="single">Single Session</option>
+                        <option value="weekly">Weekly Package (4 sessions)</option>
+                        <option value="monthly">Monthly Package (12 sessions)</option>
+                    </select>
+                    <input type="date" required>
+                    <select required>
+                        <option value="">Preferred Time</option>
+                        <option value="morning">Morning (8am-12pm)</option>
+                        <option value="afternoon">Afternoon (12pm-4pm)</option>
+                        <option value="evening">Evening (4pm-8pm)</option>
+                    </select>
+                </div>
+
+                <h3>Additional Information</h3>
+                <div class="form-section">
+                    <select required>
+                        <option value="">Has your dog received basic training?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="some">Some</option>
+                    </select>
+                    <select required>
+                        <option value="">Is your dog up to date with vaccinations?</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                        <option value="partial">Partially</option>
+                    </select>
+                    <select required>
+                        <option value="">Does your dog have any medical conditions?</option>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <textarea placeholder="Please describe any medical conditions, behavioral issues, or special requirements" required></textarea>
+                </div>
+
+                <div class="form-section terms">
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        I agree to the terms and conditions
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        I confirm all information provided is accurate
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">Book Now</button>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-info">
+            <h2>Contact Us</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>07749347695</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@gillysdogschool.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Hours</h3>
+                    <p>Mon-Fri: 8am-6pm<br>Sat: 9am-4pm<br>Sun: Closed</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Gilly's School For Dogs</h3>
+                <p>Professional dog training and care services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#booking">Book Now</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Gilly's School For Dogs. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
