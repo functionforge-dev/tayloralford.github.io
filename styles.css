@@ -592,114 +592,64 @@ footer {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    aspect-ratio: 1;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
+    height: 250px;
     object-fit: cover;
+    display: block;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-.gallery-item::after {
-    content: '';
-    position: absolute;
+/* Lightbox Modal Styles */
+.lightbox-modal {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover::after {
-    opacity: 1;
-}
-
-@media screen and (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 1rem;
-    }
-}
-
-/* Lightbox Modal */
-.lightbox-modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.85);
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
     justify-content: center;
-    transition: opacity 0.3s ease;
+    align-items: center;
 }
-.lightbox-modal.active {
-    display: flex;
-    animation: fadeIn 0.3s;
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+
 .lightbox-content {
-    max-width: 90vw;
-    max-height: 80vh;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    background: #fff;
+    max-width: 90%;
+    max-height: 90vh;
     object-fit: contain;
-    animation: popIn 0.3s;
+    border-radius: 5px;
 }
-@keyframes popIn {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
+
 .lightbox-close {
     position: absolute;
-    top: 30px;
-    right: 40px;
-    color: #fff;
-    font-size: 2.5rem;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 2100;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    transition: color 0.2s;
+    z-index: 1001;
 }
+
 .lightbox-close:hover {
-    color: var(--accent-color);
-}
-@media (max-width: 600px) {
-    .lightbox-content {
-        max-width: 98vw;
-        max-height: 60vh;
-    }
-    .lightbox-close {
-        top: 10px;
-        right: 20px;
-        font-size: 2rem;
-    }
+    color: #ccc;
 }
 
 /* Hero Carousel Section */

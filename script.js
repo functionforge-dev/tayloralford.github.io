@@ -130,37 +130,43 @@ if (bookingForm) {
     });
 }
 
-// Lightbox functionality for gallery images
-const lightboxModal = document.getElementById('lightbox-modal');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxClose = document.querySelector('.lightbox-close');
+// Lightbox functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.querySelector('.lightbox-close');
 
-if (lightboxModal && lightboxImg && lightboxClose) {
-    document.querySelectorAll('.gallery .expandable').forEach(img => {
+    galleryImages.forEach(img => {
         img.addEventListener('click', function() {
-            lightboxImg.src = this.getAttribute('data-full');
-            lightboxImg.alt = this.alt;
-            lightboxModal.classList.add('active');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = this.src;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
         });
     });
-    lightboxClose.addEventListener('click', () => {
-        lightboxModal.classList.remove('active');
-        lightboxImg.src = '';
+
+    // Close lightbox when clicking the close button
+    closeLightbox.addEventListener('click', function() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
     });
-    lightboxModal.addEventListener('click', (e) => {
-        if (e.target === lightboxModal) {
-            lightboxModal.classList.remove('active');
-            lightboxImg.src = '';
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
-    // Optional: Close on ESC key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
-            lightboxModal.classList.remove('active');
-            lightboxImg.src = '';
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     });
-}
+});
 
 // Hero Carousel Functionality
 (function() {
