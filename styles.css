@@ -838,7 +838,7 @@ footer {
     }
     .gallery h2 { margin-bottom: 2rem; }
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 1rem;
     }
 
@@ -847,13 +847,14 @@ footer {
     }
     .rehome-section h2 { margin-bottom: 2rem; }
     .rehome-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
     }
-    .rehome-card { padding: 1.5rem 1rem; min-height: 280px; }
-    .rehome-card img { width: 100px; height: 100px; }
-    .rehome-card h3 { font-size: 1.3rem; }
-    .rehome-card p { font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .rehome-card { padding: 1.2rem 0.8rem; min-height: 250px; }
+    .rehome-card img { width: 80px; height: 80px; margin-bottom: 0.8rem; }
+    .rehome-card h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+    .rehome-card p { font-size: 0.85rem; margin-bottom: 0.8rem; }
+    .view-profile-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
 
     .contact {
         padding: 4rem var(--mobile-padding);
@@ -905,11 +906,14 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
     .rehome-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.8rem;
     }
-    .rehome-card { min-height: unset; }
-    .rehome-modal-content { max-width: 95vw; padding: 1rem; }
-    .rehome-modal-content img { width: 80px; height: 80px; }
+    .rehome-card { padding: 1rem 0.6rem; min-height: 220px; }
+    .rehome-card img { width: 70px; height: 70px; margin-bottom: 0.6rem; }
+    .rehome-card h3 { font-size: 1.1rem; }
+    .rehome-card p { font-size: 0.8rem; margin-bottom: 0.6rem; }
+    .view-profile-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
 
     .dog-bone-progress { margin-bottom: 1.5rem; }
     .bone-bar { height: 18px; }
