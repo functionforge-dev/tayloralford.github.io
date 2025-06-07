@@ -346,4 +346,42 @@ rehomeModal.addEventListener('click', (e) => {
   }
   form.addEventListener('input', updateProgress);
   updateProgress();
-})(); 
+})();
+
+// Copy to Clipboard functionality
+const copyElements = document.querySelectorAll('.copy-to-clipboard');
+
+copyElements.forEach(element => {
+    element.addEventListener('click', function() {
+        const textToCopy = this.getAttribute('data-copy');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                // Show feedback
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.classList.remove('copied');
+                }, 1500); // Hide after 1.5 seconds
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        } else {
+            // Fallback for older browsers (less reliable, might not be needed for modern sites)
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                // Show feedback
+                this.classList.add('copied');
+                setTimeout(() => {
+                    this.classList.remove('copied');
+                }, 1500); // Hide after 1.5 seconds
+            } catch (err) {
+                console.error('Fallback: Failed to copy text: ', err);
+            }
+            document.body.removeChild(textArea);
+        }
+    });
+}); 

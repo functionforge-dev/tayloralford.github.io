@@ -428,6 +428,38 @@ nav {
     margin-bottom: 1rem;
 }
 
+.contact-card .copy-to-clipboard {
+    cursor: pointer;
+    position: relative;
+    display: inline-block; /* to contain the ::after pseudo-element */
+    padding-bottom: 0.2em; /* little space for feedback */
+}
+
+.contact-card .copy-to-clipboard:hover {
+    color: var(--accent-color); /* Highlight on hover */
+}
+
+.copy-to-clipboard::after {
+    content: 'Copied!';
+    position: absolute;
+    bottom: -1.5em; /* Position below text */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.copy-to-clipboard.copied::after {
+    opacity: 1;
+}
+
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -603,7 +635,7 @@ footer {
 
 @media screen and (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 1rem;
     }
 }
@@ -838,8 +870,8 @@ footer {
     }
     .gallery h2 { margin-bottom: 2rem; }
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
     }
 
     .rehome-section {
@@ -847,14 +879,14 @@ footer {
     }
     .rehome-section h2 { margin-bottom: 2rem; }
     .rehome-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
     }
-    .rehome-card { padding: 1.2rem 0.8rem; min-height: 250px; }
-    .rehome-card img { width: 80px; height: 80px; margin-bottom: 0.8rem; }
-    .rehome-card h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
-    .rehome-card p { font-size: 0.85rem; margin-bottom: 0.8rem; }
-    .view-profile-btn { padding: 0.6rem 1.2rem; font-size: 0.9rem; }
+    .rehome-card { padding: 1.8rem 1rem; min-height: 300px; }
+    .rehome-card img { width: 100px; height: 100px; margin-bottom: 1rem; }
+    .rehome-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .rehome-card p { font-size: 0.95rem; margin-bottom: 1rem; }
+    .view-profile-btn { padding: 0.7rem 1.4rem; font-size: 1rem; }
 
     .contact {
         padding: 4rem var(--mobile-padding);
@@ -1013,4 +1045,91 @@ footer {
     .dog-bone-progress { max-width: 98vw; }
     .bone-bar { height: 22px; }
     .bone-emoji { font-size: 1.1rem; right: 4px; }
+}
+
+/* Rehome Section */
+.rehome-section {
+    padding: 5rem 1rem;
+    background: var(--gray-light);
+}
+.rehome-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+.rehome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.rehome-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 340px;
+    justify-content: flex-start;
+}
+.rehome-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+.rehome-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.rehome-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.rehome-card p {
+    color: #444;
+    margin-bottom: 1.2rem;
+}
+.view-profile-btn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.view-profile-btn:hover {
+    background: var(--light-green);
+}
+@media (max-width: 768px) {
+    .rehome-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+    }
+    .rehome-card { padding: 1.8rem 1rem; min-height: 300px; }
+    .rehome-card img { width: 100px; height: 100px; margin-bottom: 1rem; }
+    .rehome-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .rehome-card p { font-size: 0.95rem; margin-bottom: 1rem; }
+    .view-profile-btn { padding: 0.7rem 1.4rem; font-size: 1rem; }
+}
+@media (max-width: 600px) {
+    .rehome-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 0.8rem;
+    }
+    .rehome-card { padding: 1rem 0.6rem; min-height: 220px; }
+    .rehome-card img { width: 70px; height: 70px; margin-bottom: 0.6rem; }
+    .rehome-card h3 { font-size: 1.1rem; }
+    .rehome-card p { font-size: 0.8rem; margin-bottom: 0.6rem; }
+    .view-profile-btn { padding: 0.5rem 1rem; font-size: 0.85rem; }
 } 
